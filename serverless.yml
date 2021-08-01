@@ -1,0 +1,19 @@
+service: s3triggered
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  lambdaHashingVersion: '20201221'
+
+functions:
+  s3handler:
+    handler: s3handler.handler
+    events:
+      - s3:
+          bucket: kfs3-dev-kfs3-destination
+          event: s3:ObjectCreated:*
+          rules:
+            - prefix: pubrecord/
+          existing: true
+
+
