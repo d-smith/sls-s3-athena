@@ -10,7 +10,7 @@ functions:
     handler: s3handler.handler
     events:
       - s3:
-          bucket: kfs3-dev-kfs3-destination
+          bucket: ${env:FIREHOSE_DESTINATION_BUCKET}
           event: s3:ObjectCreated:*
           rules:
             - prefix: pubrecord/
