@@ -18,5 +18,9 @@
   "homepage": "https://github.com/d-smith/sls-s3-athena#readme",
   "devDependencies": {
     "aws-sdk": "^2.962.0"
+  },
+  "dependencies": {
+    "parquetjs": "^0.11.2",
+    "through2": "^4.0.2"
   }
 }
