@@ -4,10 +4,8 @@ Sample to fire a lambda on s3 object creation, which translates the data to parq
 
 Use [sls-kinesis-firehose-s3](https://github.com/d-smith/sls-kinesis-firehose-s3) for the data ingest side.
 
-State
+Next experiment:
 
-* Set up basic structure to receieve event - done
-* Transform event and write to parquet area - pending
-* DB table set up - pending
-* Query examples - pending
-* Event notification on query results - interesting/pending
+* Create table via jupyter notebook
+* Create scheduled crawler by hand
+* Try queries as new partitions created
